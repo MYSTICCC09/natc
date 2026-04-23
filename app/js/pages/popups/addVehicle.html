@@ -1,0 +1,52 @@
+<div class="container-fluid" style="background: #f5f5f5; border-radius: 10px; padding:10px;">
+    <br/>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><i class="fa fa-car"></i> Add Vehicle</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                    <form ng-submit="addVehicleSubmit(form)">
+                        <div class="from-group">
+                            <input style="margin-bottom: 10px" class="form-control txt-field" required type="text" ng-model="form.brand" placeholder="Brand"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Brand'">
+                            <input style="margin-bottom: 10px"  class="form-control txt-field" required type="text" ng-model="form.model" placeholder="Model" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Model'">
+                            <input style="margin-bottom: 10px"  class="form-control txt-field" required type="text" ng-model="form.unit_no" placeholder="Unit Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Unit Number'">
+                            <input style="margin-bottom: 10px"  class="form-control txt-field" required type="text" ng-model="form.plate_no" placeholder="Plate Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Plate Number'">
+                            <input style="margin-bottom: 10px"  class="form-control txt-field" required type="text" ng-model="form.body_no" placeholder="Body Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Body Number'">
+                        </div>
+                        <div class="form-group">
+                            <select ng-model="form.type" required class="form-control" style="height: 40px">
+                                <option value="" disabled selected hidden>Vehicle Type</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Van">Van</option>
+                                <option value="Truck">Truck</option>
+                                <option value="Luxury">Luxury</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select ng-model="form.color" required class="form-control" style="height: 40px">
+                                <option value="" disabled selected hidden>Color</option>
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Gray">Gray</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Red">Red</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Brown">Brown</option>
+                                <option value="Green">Green</option>
+                                <option value="Beige">Beige</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Gold">Gold</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Purple">Purple</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block text-center text-uppercase">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

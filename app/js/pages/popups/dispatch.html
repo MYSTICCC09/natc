@@ -1,0 +1,73 @@
+<div class="container-fluid" style="background: #f5f5f5; border-radius: 10px; padding:10px;">
+    <br/>
+    <style>
+        .toHov:hover {
+            border: 1px solid #008000;
+            cursor: pointer;
+        }
+    </style>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><i class="fa fa-car"></i> Select Cab to Dispatch - {{booking.booking_no}}</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
+                    <div class="thumbnail" style="font-size: 12px">
+                        <div class="caption">
+                            <h3>{{booking.booking_no}}</h3>
+                            <p>
+                                <b>Name:</b> {{booking.name}} <br/>
+                                <b>Email:</b> {{booking.email}} <br/>
+                                <b>Contact:</b> {{booking.phone}} <br/>
+                                <b>Pickup Date:</b> {{booking.booking_date}}<br/>
+                                <b>Pref. Vehicle:</b> {{booking.vehicle_type}}<br/>
+                                <b>Pickup:</b> {{booking.pickup}}<br/>
+                                <b>Pickup:</b> {{booking.rates}}<br/>
+                            </p>
+                            <span class="label label-warning">Today</span>
+                            <span class="label label-default">Pax: {{booking.passengers}}</span>
+                            <span class="label label-primary">Bags: {{booking.luggage}}</span>
+                            <span class="label label-info" ng-if="booking.status == 1">Active</span>
+                            <span class="label label-success" ng-if="booking.status == 2">Done</span>
+                            <span class="label label-danger" ng-if="booking.status == 3">Cancelled</span>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12" ng-if="cabSelected == 0">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <a style="color: #000000" class="btn btn-default" role="button">Search</a>
+                        </div>
+                        <input type="text" ng-model="q" class="form-control" placeholder="by Brand / Name"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'by Brand / Name'">
+                    </div>
+                    <br/>
+                    <div style="height: 180px; overflow-y: auto; padding: 5px">
+                        <div ng-click="cabSelect(availCar)" class="well well-sm toHov" ng-repeat="availCar in availableCars | filter: q">
+                            <b class="text-info"><i class="fa fa-user"></i> {{availCar.driver}}</b>
+                            <br/>
+                            <i class="fa fa-cab"></i> <i>{{availCar.model}} | {{availCar.plate}}</i> <br/>
+                            <span class="label label-success">Available</span> <span class="label label-info">{{availCar.license}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12" ng-if="cabSelected == 1">
+                    <div style="padding: 5px">
+                        <div class="well well-sm">
+                            <b class="text-info"><i class="fa fa-user"></i> {{cab.driver}}</b> <small><i class="fa fa-check text-success"></i></small>
+                            <br/>
+                            <i class="fa fa-cab"></i> <i>{{cab.model}} | {{cab.plate}}</i>
+                            <br/>
+                            <b>Brand: </b> {{cab.brand}} <br/>
+                            <b>Unit: </b> {{cab.unit}} <br/>
+                            <span style="font-size: 10px" class="label label-success">Available</span> <span style="font-size: 10px"  class="label label-info">{{cab.license}}</span>
+                            <hr style="margin-top: 10px; margin-bottom: 5px"/>
+                            <a  style="cursor: pointer; color: white;" ng-click="assignCab(rate)" class="btn btn-primary btn-sm" role="button">Assign</a>
+                            <a  style="cursor: pointer; color: white;" ng-click="cancelCabSelection()" class="btn btn-danger btn-sm" role="button">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

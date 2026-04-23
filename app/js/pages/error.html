@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row" style="background: #BED735;">
+        <!--<div class="col-md-2">-->
+        <!--&lt;!&ndash;<div style="background: white; display: inline-block">&ndash;&gt;-->
+        <!--&lt;!&ndash;<img src="{{globals.rootUrl}}app/images/menu_logo.jpg" class="img-responsive img-circle"&ndash;&gt;-->
+        <!--&lt;!&ndash;style="display: inline">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+        <div class="col-md-12">
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" style="width: 400px" ng-model="query"
+                           placeholder="What are you looking for?">
+                </div>
+                <button type="submit" class="btn btn-success" ng-click="findItems(query)">Search here</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    Oops!</h1>
+                <h2>
+                    {{errorCode}}: {{errorDesc}}</h2>
+
+                <div class="error-details">
+                    {{errorMessage}}
+                </div>
+                <br>
+                <div class="error-actions">
+                    <a href="#/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> Take Me
+                        Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

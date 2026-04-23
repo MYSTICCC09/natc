@@ -1,0 +1,52 @@
+<div class="container-fluid"style="margin-bottom: 100px">
+    <div class="row">
+        <div class="col-md-2 col-lg-2 visible-md visible-lg"></div>
+        <div class="col-md-10 col-lg-10">
+            <div class="row" style="text-align: center">
+                <div class="col-lg-12 text-left">
+                    <h2 class="section-heading">Welcome to Dispatching System</h2>
+                </div>
+                <br/>
+                <br/>
+                <div class="col-lg-12 text-left">
+                    <div class="col-lg-12 text-left">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <h3 style="margin-bottom: 5px"><i class="fa fa-2x fa-calendar text-primary sr-icons"></i> Bookings</h3>
+                                <p style="margin-bottom: 0px">Book, Schedule, and Manage Drivers and Vehicles</p>
+                            </div>
+                            <div class="col-lg-3" style="text-align: left;">
+                                <br/>
+                                <a href="#/bookings" class="page-scroll btn btn-primary btn-lg sr-button"><i class="fa fa-edit"></i> Manage</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 text-left" style="margin-top: 30px" ng-if="user.userType == 'Admin'">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <h3 style="margin-bottom: 5px"><i class="fa fa-2x fa-car text-success sr-icons"></i> Drivers and Vehicles</h3>
+                                <p style="margin-bottom: 0px">Add Cars and Drivers</p>
+                            </div>
+                            <div class="col-lg-3" style="text-align: left;">
+                                <br/>
+                                <a href="#/driversAndVehicles" class="page-scroll btn btn-success btn-lg sr-button"><i class="fa fa-edit"></i> Manage</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 text-left" style="margin-top: 40px" ng-if="user.userType == 'Admin'">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <h3 style="margin: 5px"><i class="fa fa-2x fa-bar-chart text-warning sr-icons"></i> Admin Panel</h3>
+                                <p style="margin-bottom: 0px">Manage Users and Dashboards</p>
+                            </div>
+                            <div class="col-lg-3" style="text-align: left">
+                                <br/>
+                                <a href="#/adminPanel" class="page-scroll btn btn-warning btn-lg sr-button"><i class="fa fa-edit"></i> Manage</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

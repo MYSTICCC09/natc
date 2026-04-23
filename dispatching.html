@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js" ng-app="ptApp">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Taxi</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" media="print" href="bower_components/bootstrap/dist/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />-->
+    <!--<link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" />-->
+    <!-- Ng Dialog-->
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.css"/>
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-plain.css">
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-custom-width.css">
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-mobile.css">
+
+    <!--Ng Notify-->
+    <link rel="stylesheet" href="bower_components/ng-notify/dist/ng-notify.min.css"/>
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+
+    <!-- Theme CSS -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <![endif]-->
+
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css"/>
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="bower_components/angularPrint/angularPrint.css" rel="stylesheet" type="text/css">
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/dispatching.js"></script>
+    <!-- SPELLS -->
+    <!-- load angular and angular route via CDN -->
+    <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angularPrint/angularPrint.js"></script>
+    <script src="bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls-2.0.0.min.js"></script>
+    <script src="bower_components/ngDialog/js/ngDialog.js"></script>
+    <script src="bower_components/ng-notify/dist/ng-notify.min.js"></script>
+    <script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+
+    <script src="bower_components/html2canvas/html2canvas.js"></script>
+    <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
+    <script src="bower_components/pdfmake/build/vfs_fonts.js"></script>
+
+    <script src="app/js/app.js"></script>
+    <script src="app/js/routing.js"></script>
+    <!--Services-->
+    <script src="app/js/services/loginService.js"></script>
+    <script src="app/js/services/bookingService.js"></script>
+    <script src="app/js/services/adminPanelService.js"></script>
+    <script src="app/js/services/driverAndVehiclesService.js"></script>
+    <!--Controllers-->
+    <script src="app/js/controllers/mainController.js"></script>
+    <script src="app/js/controllers/bookingController.js"></script>
+    <script src="app/js/controllers/driverAndVehiclesController.js"></script>
+    <script src="app/js/controllers/loginController.js"></script>
+    <script src="app/js/controllers/adminPanelController.js"></script>
+
+
+    <!--Factories-->
+    <script src="app/js/factories/globals.js"></script>
+    <script src="app/js/factories/lookups.js"></script>
+
+
+</head>
+
+<body ng-controller="mainController">
+<header id="header">
+
+    <div class="header-top">
+    </div>
+    <div class="container main-menu">
+
+        <div class="row align-items-center justify-content-between d-flex">
+
+            <a href="index.html"><img src="img/logo.png" alt="" title=""/></a>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="#/">Home</a></li>
+                    <!--<li ng-if="user.isLoggedIn"><a href="#/dashboard">Dashboard</a></li>-->
+                    <li ng-if="user.isLoggedIn"><a href="#/bookings">Bookings</a></li>
+                    <li ng-if="user.isLoggedIn">
+                        <a href="#/driversAndVehicles">Drivers and Vehicles</a>
+                    </li>
+                    <li ng-if="!user.isLoggedIn"><a href="#/login">Login</a></li>
+                    <li ng-if="user.isLoggedIn"><a style="color: #f5f5f5" ng-click="logout()">Logout</a></li>
+                </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+        </div>
+    </div>
+</header>
+<!-- #header -->
+
+<!-- start banner Area -->
+<section class="banner-area relative about-banner" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Dispatching
+                </h1>
+
+                <p class="text-white link-nav"><a href="#/">Home </a> <span class="lnr lnr-arrow-right"></span>
+                    <a href="#/"> Dispatching</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+
+<!-- Start image-gallery Area -->
+<section class="section-gap">
+    <div class="container">
+        <div ng-view></div>
+    </div>
+</section>
+<!-- End image-gallery Area -->
+
+<!-- start footer Area -->
+<footer class="footer-area">
+    <div class="container">
+        <br/>
+        <br/>
+        <br/>
+    </div>
+    <img class="footer-bottom" src="img/footer-bottom.png" alt="">
+</footer>
+<!-- End footer Area -->
+
+
+
+</body>
+</html>

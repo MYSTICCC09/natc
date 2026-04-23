@@ -1,0 +1,40 @@
+<style>
+
+    .file {
+        /*position: relative;*/
+    }
+    .file label {
+        background: #39D2B4;
+        padding: 5px 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: .9em;
+        transition: all .4s;
+    }
+    .file input {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        opacity: 0.01;
+        cursor: pointer;
+    }
+    .file input:hover + label,
+    .file input:focus + label {
+        background: #34495E;
+        color: #39D2B4;
+    }
+</style>
+<div>
+    <div class="form-group">
+        <h4 style="margin-bottom: 0px">Upload your profile picture</h4>
+        <div class="file" ng-if="uploader.queue.length == 0">
+            <input class="form-control" type="file" id="file" nv-file-select uploader="uploader"/><br/>
+            <label for="file">Browse</label>
+        </div>
+        <div ng-repeat="item in uploader.queue" style="margin-top: 10px">
+            <button class="btn btn-success" ng-click="item.upload()">upload</button>
+            <button class="btn btn-danger" ng-click="cancelUpload()">cancel</button>
+        </div>
+    </div>
+</div>

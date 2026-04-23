@@ -1,0 +1,108 @@
+<div class="row">
+    <style>
+        b {
+            color: dimgray;
+        }
+    </style>
+    <div class="col-md-12">
+        <h1 style="margin-top: 0px">Drivers and Vehicles</h1>
+
+        <div class="input-group">
+            <div class="input-group-btn">
+                <a ng-click="addDrivers()" class="btn btn-primary" role="button" style="color: white">Add Drivers</a>
+                <a ng-click="addVehicles()" class="btn btn-warning" role="button" style="color: white">Add Vehicles</a>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-md-6 col-xs-12  col-sm-12">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a href="#" class="btn btn-default" role="button">Drivers</a>
+                    </div>
+                    <input type="text" ng-model="d" class="form-control" placeholder="Search Driver"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Driver'">
+                    <div class="input-group-btn">
+                        <a ng-click="searchDriver(d)" class="btn btn-info" role="button" style="color: #f5f5f5"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+                <br/>
+                <div style="height: 400px; overflow-y: scroll">
+                    <table class="table table-condensed">
+                        <tr>
+                            <td>Name</td>
+                            <td>License</td>
+                            <td>Status</td>
+                            <td>Assigned</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="driver in drivers">
+                            <td>{{driver.head.driver_fullname}}</td>
+                            <td>{{driver.head.driver_license_type}}</td>
+                            <td>
+                                <span ng-if="driver.head.status == 1" class="text-success">Active</span>
+                                <span ng-if="driver.head.status == 2" class="text-danger">Inactive</span>
+                            </td>
+                            <td>
+                                <span ng-if="!angular.isUndefined(driver.vehicle)" class="text-success">Assigned</span>
+                                <span ng-if="angular.isUndefined(driver.vehicle)" class="text-danger">Not Assigned</span>
+                            </td>
+                            <td class="text-right">
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <button ng-click="assignDriverToVehicles(driver)" class="btn btn-sm btn-success"><i class="fa fa-car"></i> <i class="fa fa-arrow-right"></i> <i class="fa fa-user"></i></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-xs-12  col-sm-12">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a href="#" class="btn btn-default" role="button">Vehicles</a>
+                    </div>
+                    <input type="text" ng-model="v" class="form-control" placeholder="Search Vehicle"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Vehicle'">
+                    <div class="input-group-btn">
+                        <a ng-click="searchVehicle(v)" class="btn btn-info" role="button" style="color: #f5f5f5"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+                <br/>
+                <div style="height: 400px; overflow-y: scroll">
+                    <table class="table table-condensed">
+                        <tr>
+                            <td>Brand</td>
+                            <td>Model</td>
+                            <td>Unit No.</td>
+                            <td>Body</td>
+                            <td>Plate No.</td>
+                            <td>Color</td>
+                            <td>Status</td>
+                            <!--<td></td>-->
+                        </tr>
+                        <tr ng-repeat="vehicle in vehicles">
+                            <td>{{vehicle.brand}}</td>
+                            <td>{{vehicle.model}}</td>
+                            <td>{{vehicle.unit_no}}</td>
+                            <td>{{vehicle.body_number}}</td>
+                            <td>{{vehicle.plate_no}}</td>
+                            <td>{{vehicle.color}}</td>
+                            <td>
+                                <span ng-if="vehicle.status == 1" class="text-success">Active</span>
+                                <span ng-if="vehicle.status == 2" class="text-danger">Inactive</span>
+                            </td>
+                            <!--<td>-->
+                                <!--<button class="btn btn-xs btn-primary"><i class="fa fa-search"></i></button>-->
+                            <!--</td>-->
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>

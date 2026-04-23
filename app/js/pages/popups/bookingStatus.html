@@ -1,0 +1,56 @@
+<div class="container-fluid" style="background: #f5f5f5; border-radius: 10px; padding:10px;">
+    <br/>
+    <style>
+        .toHov:hover {
+            border: 1px solid #008000;
+            cursor: pointer;
+        }
+    </style>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><i class="fa fa-car"></i> Booking Status - {{booking.booking_no}}</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
+                    <div class="thumbnail" style="font-size: 12px">
+                        <div class="caption">
+                            <h3>{{booking.booking_no}}</h3>
+                            <p>
+                                <b>Name:</b> {{booking.name}} <br/>
+                                <b>Email:</b> {{booking.email}} <br/>
+                                <b>Contact:</b> {{booking.phone}} <br/>
+                                <b>Pickup Date:</b> {{booking.booking_date}}<br/>
+                                <b>Pref. Vehicle:</b> {{booking.vehicle_type}}<br/>
+                                <b>Pickup:</b> {{booking.pickup}}<br/>
+                            </p>
+                            <span class="label label-warning">Today</span>
+                            <span class="label label-default">Pax: {{booking.passengers}}</span>
+                            <span class="label label-primary">Bags: {{booking.luggage}}</span>
+                            <span class="label label-info" ng-if="booking.status == 1">Active</span>
+                            <span class="label label-success" ng-if="booking.status == 2">Done</span>
+                            <span class="label label-danger" ng-if="booking.status == 3">Cancelled</span>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+                    <div style="padding: 5px">
+                        <div class="well well-sm">
+                            <b class="text-info"><i class="fa fa-user"></i> {{booking.driver.driver_fullname}}</b> <small><i class="fa fa-check text-success"></i></small>
+                            <br/>
+                            <i class="fa fa-cab"></i> <i>{{booking.vehicle.model}} | {{booking.vehicle.plate_no}}</i>
+                            <br/>
+                            <b>Brand: </b> {{booking.vehicle.brand}} <br/>
+                            <b>Unit: </b> {{booking.vehicle.unit_no}} <br/>
+                            <b>Lic. No: </b> {{booking.driver.driver_license_no}} <br/>
+                            <span style="font-size: 10px"  class="label label-info">{{booking.vehicle.license_type}}</span>
+                            <hr style="margin-top: 10px; margin-bottom: 5px"/>
+                            <a ng-click="markBookingAsDone(booking.booking_id)" style="color: white" class="btn btn-warning btn-sm" role="button">Mark as Done</a>
+                            <a  style="cursor: pointer; color: white;" ng-click="cancelAssignment(booking.booking_id)" class="btn btn-danger btn-sm" role="button">Cancel Assignment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

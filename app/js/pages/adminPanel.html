@@ -1,0 +1,45 @@
+<div class="row">
+    <style>
+        b {
+            color: dimgray;
+        }
+    </style>
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-md-3">
+                <h1 style="margin-top: 0px">Admin Panel</h1>
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a ng-click="addUser()" class="btn btn-primary" role="button" style="color: white">Add Users</a>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div style="max-height: 500px; min-height: 200px; overflow-y: auto">
+                    <div class="well well-sm toHov" ng-repeat="nuser in users" ng-click="bookingStatus(booking)">
+                        <b class="text-info"><i class="fa fa-id-card"></i> {{nuser.user_fullname}}</b><br/>
+                        <i class="fa fa-user"></i> <i>{{nuser.username}}</i> <br/>
+                        <i class="fa fa-home"></i> <i>{{nuser.terminal}}</i> <br/>
+                        <i class="fa fa-cog"></i> <i>{{nuser.user_type}}</i> <br/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h1 style="margin-top: 0px">Dashboard</h1>
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a class="btn btn-primary" disabled role="button" style="color: white">View Charts</a>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div style="max-height: 500px; min-height: 200px; overflow-y: auto">
+                    <i>This Feature is not yet available for this version </i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>

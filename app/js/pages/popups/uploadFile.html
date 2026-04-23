@@ -1,0 +1,44 @@
+<style>
+
+    .ngdialog-content{
+        top: 0px !important;  
+    }
+
+    .file {
+        /*position: relative;*/
+    }
+    .file label {
+        background: #39D2B4;
+        padding: 5px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all .4s;
+        cursor: pointer;
+    }
+    .file input {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        opacity: 0.01;
+        cursor: pointer;
+    }
+    .file input:hover + label,
+    .file input:focus + label {
+        background: #34495E;
+        color: #39D2B4;
+    }
+</style>
+<br/>
+<div class="form-group">
+     Upload Shoe Image
+    <div class="file" ng-if="uploader.queue.length == 0">
+        <input class="form-control" type="file" id="file" nv-file-select uploader="uploader"/><br/>
+        <label for="file">Browse</label>
+    </div>
+    <div ng-repeat="item in uploader.queue" style="margin-top: 20px">
+        <button class="btn btn-success" ng-click="item.upload()">upload</button>
+        <button class="btn btn-danger" ng-click="cancelUpload()">cancel</button>
+    </div>
+</div>
