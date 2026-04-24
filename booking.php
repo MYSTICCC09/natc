@@ -35,7 +35,7 @@
 				</div>
 			    <div class="container main-menu">
 			    	<div class="row align-items-center justify-content-between d-flex">
-			    		<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>		
+			    		<a href="index.php"><img src="img/logo.png" alt="NATC Logo" title="NATC" /></a>
 						<nav id="nav-menu-container">
 							<ul class="nav-menu">
 							  <li class="menu-active"><a href="index.html">Home</a></li>
@@ -120,13 +120,16 @@
                                 <h4>Select Vehicle</h4>
                             </div>
                             <br/>
-                            <form class="form" method="post" action="addBooking.php">
+                            <form class="form" method="post" action="https://natcback-production.up.railway.app/addBooking.php">
                                 <?php
-                                $servername = "localhost";
-                                $username = "root";
-                                $password = "";
-                                $dbname = "natc_db";
+                               $servername = getenv('MYSQLHOST');
+							   $username = getenv('MYSQLUSER');
+						       $password = getenv('MYSQLPASSWORD');
+							   $dbname = getenv('MYSQLDATABASE');
+							   $port = getenv('MYSQLPORT');
 
+							// Update the connection line to include the port
+							$conn = new mysqli($servername, $username, $password, $dbname, $port);
                                 // Create connection
                                 $conn = new mysqli($servername, $username, $password, $dbname);
                                 $sql = "SELECT * FROM natc_destination_rates";
@@ -260,14 +263,9 @@
 								<h6>Newsletter</h6>
 								<p>Stay update with our latest</p>
 								<div class="" id="mc_embed_signup">
-									<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-			                            	<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
-			                            	<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
-
-										<div class="info"></div>
+									<form action="https://formsubmit.co/andreinituyacapili@gmail.com" method="POST" class="form-inline">
+									<input class="form-control" name="email" placeholder="Enter Email" required="" type="email">
+									<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
 									</form>
 								</div>
 							</div>
