@@ -43,19 +43,12 @@
 								<li><a href="rates.php">Rates</a></li>
 								<li><a href="tracking.html">Tracking</a></li>
 								<li><a href="contact.html">Contact</a></li>
-							    <ul>
-							      <li><a href="blog-home.html">Blog Home</a></li>
-							      <li><a href="blog-single.html">Blog Single</a></li>
-							      <li class="menu-has-children"><a href="">Level 2</a>
-							        <ul>
-							          <li><a href="#">Item One</a></li>
-							          <li><a href="#">Item Two</a></li>
-							        </ul>
-							      </li>					              
-							    </ul>
-							  </li>
-							  <li><a href="elements.html">Elements</a></li>							  			          	          
-							  <li><a href="contact.html">Contact</a></li>
+							    <ul class="nav-menu">
+								<li class="menu-active"><a href="index.php">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="rates.php">Rates</a></li>
+								<li><a href="tracking.html">Tracking</a></li>
+								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</nav><!-- #nav-menu-container -->		
 			    	</div>
@@ -131,7 +124,6 @@
 							// Update the connection line to include the port
 							$conn = new mysqli($servername, $username, $password, $dbname, $port);
                                 // Create connection
-                                $conn = new mysqli($servername, $username, $password, $dbname);
                                 $sql = "SELECT * FROM natc_destination_rates";
                                 $result = $conn->query($sql);
 
