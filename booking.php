@@ -123,6 +123,9 @@
 
 							// Update the connection line to include the port
 							$conn = new mysqli($servername, $username, $password, $dbname, $port);
+							if ($conn->connect_error) {
+								die("Connection failed: " . $conn->connect_error);
+							}
                                 // Create connection
                                 $sql = "SELECT * FROM natc_destination_rates";
                                 $result = $conn->query($sql);
