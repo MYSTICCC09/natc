@@ -1,0 +1,10 @@
+[phases.setup]
+nixPkgs = ["php82", "apacheHttpd", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "php82Extensions.mbstring"]
+
+[phases.build]
+cmds = [
+  "cp apache.conf /etc/apache2/apache2.conf"
+]
+
+[start]
+cmd = "apache2 -f /etc/apache2/apache2.conf -DFOREGROUND"
