@@ -20,7 +20,8 @@
     <!--
     CSS
     ============================================= -->
-    <link rel="stylesheet" href="css/linearicons.css">$servername = "localhost";
+    <link rel="stylesheet" href="css/linearicons.css">
+        $servername = "localhost";
         $servername = getenv('MYSQLHOST');
         $username   = getenv('MYSQLUSER');
         $password   = getenv('MYSQLPASSWORD');
@@ -77,13 +78,13 @@
     if($_POST){
 //        print_r($_POST);
 //        exit;
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "natc_db";
-
+        $servername = getenv('MYSQLHOST');
+			$username   = getenv('MYSQLUSER');
+			$password   = getenv('MYSQLPASSWORD');
+			$dbname     = getenv('MYSQLDATABASE');
+			$port       = getenv('MYSQLPORT');
         // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        $conn = new mysqli($servername, $username, $password, $dbname, $port);
         $sql = "SELECT * FROM natc_booking WHERE booking_no='{$_POST['bId']}' limit 1";
         $result = $conn->query($sql);
 
