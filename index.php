@@ -35,10 +35,10 @@
 				</div>
 			    <div class="container main-menu">
 			    	<div class="row align-items-center justify-content-between d-flex">
-			    		<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>		
+			    		<a href="index.php"><img src="img/logo.png"	
 						<nav id="nav-menu-container">
 							<ul class="nav-menu">
-							  <li class="menu-active"><a href="index.html">Home</a></li>
+							  <li class="menu-active"><a href="index.php">Home</a></li>
 							  <li><a href="about.html">About</a></li>
                                 <li><a href="rates.php">Rates</a></li>
                                 <li><a href="tracking.html">Tracking</a></li>
