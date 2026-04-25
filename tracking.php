@@ -20,7 +20,13 @@
     <!--
     CSS
     ============================================= -->
-    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/linearicons.css">$servername = "localhost";
+        $servername = getenv('MYSQLHOST');
+        $username   = getenv('MYSQLUSER');
+        $password   = getenv('MYSQLPASSWORD');
+        $dbname     = getenv('MYSQLDATABASE');
+        $port       = getenv('MYSQLPORT');
+        $conn = new mysqli($servername, $username, $password, $dbname, $port);
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
