@@ -2,4 +2,6 @@ Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php [L]
+RewriteRule . index.php [L]git add .
+git commit -m "Move htaccess to root"
+git push

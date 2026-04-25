@@ -68,13 +68,14 @@
 			<section class="image-booking-area">
                 <br/>
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "natc_db";
+                $servername = getenv('MYSQLHOST');
+				$username   = getenv('MYSQLUSER');
+				$password   = getenv('MYSQLPASSWORD');
+				$dbname     = getenv('MYSQLDATABASE');
+				$port       = getenv('MYSQLPORT');
 
                 // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
+                $conn = new mysqli($servername, $username, $password, $dbname, $port);
                 $sql = "SELECT * FROM natc_booking WHERE booking_id={$_GET['bid']} limit 1";
                 $result = $conn->query($sql);
 
