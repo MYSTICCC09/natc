@@ -38,11 +38,11 @@
 			    		<a href="index.php"><img src="img/logo.png" alt="NATC Logo" title="NATC" /></a>
 						<nav id="nav-menu-container">
 							<ul class="nav-menu">
-							  <li class="menu-active"><a href="index.html">Home</a></li>
-							  <li><a href="about.html">About</a></li>
-							  <li><a href="service.html">Services</a></li>
-							  <li><a href="gallery.html">Gallery</a></li>
-							  <li class="menu-has-children"><a href="">Blog</a>
+								<li class="menu-active"><a href="index.php">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="rates.php">Rates</a></li>
+								<li><a href="tracking.html">Tracking</a></li>
+								<li><a href="contact.html">Contact</a></li>
 							    <ul>
 							      <li><a href="blog-home.html">Blog Home</a></li>
 							      <li><a href="blog-single.html">Blog Single</a></li>
