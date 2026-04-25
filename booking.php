@@ -129,6 +129,11 @@
                                 // Create connection
                                 $sql = "SELECT * FROM natc_destination_rates";
                                 $result = $conn->query($sql);
+								if (!$result) {
+									die("Query failed: " . $conn->error);
+								}
+								echo "Rows: " . $result->num_rows;
+								
 
                                 if ($result->num_rows > 0) {
                                     // output data of each row
