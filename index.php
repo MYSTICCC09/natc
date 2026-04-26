@@ -335,7 +335,7 @@
 									<h4>Portable latest Fashion for young women</h4>
 								</a>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
+									Website made by: Andrei Capili (BSCPE 4-1)
 								</p>
 								<p class="date">31st January, 2018</p>
 							</div>
@@ -353,7 +353,7 @@
 									<h4>Portable latest Fashion for young women</h4>
 								</a>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
+									Website made by: Andrei Capili (BSCPE 4-1)
 								</p>
 								<p class="date">31st January, 2018</p>
 							</div>

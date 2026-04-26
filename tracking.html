@@ -1,6 +1,7 @@
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
+		<a href="index.html">Home</a>
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
@@ -198,5 +199,28 @@
 			<script src="js/jquery.nice-select.min.js"></script>
 			<script src="js/mail-script.js"></script>
 			<script src="js/main.js"></script>
+
+			// Assuming $row is your fetched booking data
+$currentStatus = $row['status']; 
+
+// Define what each number means
+$statusText = "Unknown";
+$statusClass = "status-pending";
+
+if ($currentStatus == 1) {
+    $statusText = "Awaiting Confirmation";
+    $statusClass = "status-waiting";
+} elseif ($currentStatus == 2) {
+    $statusText = "Confirmed";
+    $statusClass = "status-accepted";
+} elseif ($currentStatus == 3) {
+    $statusText = "Rejected";
+    $statusClass = "status-rejected";
+}
+?>
+
+<div class="booking-status <?php echo $statusClass; ?>">
+    <strong>Status:</strong> <?php echo $statusText; ?>
+</div>
 		</body>
 	</html>
