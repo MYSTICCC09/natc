@@ -63,10 +63,19 @@ if(isset($_POST)){
                     </body></html>
                 ";
 
-                $headers  = "MIME-Version: 1.0\r\n";
-                $headers .= "Content-type:text/html;charset=UTF-8\r\n";
-                $headers .= "From: <booking@natc.com>\r\n";
-                mail($to, $subject, $message, $headers);
+               // Send email via curl to FormSubmit
+$emailData = http_build_query([
+    'name'    => $_POST['name'],
+    'email'   => $_POST['email'],
+    'message' => "Booking No: {$bookingNo} | Vehicle: {$_POST['vehicle']} | Date: {$newDate} | Rate: {$rate} php | Pickup: {$_POST['pickup']}"
+]);
+
+$ch = curl_init('https://formsubmit.co/' . $to);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $emailData);
+curl_exec($ch);
+curl_close($ch);
 
                 // ✅ Fixed: redirect to your live Railway frontend URL
                 header('Location: https://natc-production.up.railway.app/bookingSuccess.php?bid='.$last_id);
